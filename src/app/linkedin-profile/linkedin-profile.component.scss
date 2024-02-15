@@ -1,0 +1,10 @@
+.linkedin-text {
+  padding: 1rem;
+  a {
+    cursor: pointer;
+    color: cadetblue;
+    &:hover {
+      color: rgb(38, 26, 175);
+    }
+  }
+}

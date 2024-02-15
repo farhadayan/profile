@@ -1,0 +1,26 @@
+<div class="project-list mat-elevation-z8">
+  <mat-table #table [dataSource]="myProjectsData">
+    <ng-container matColumnDef="project-title">
+      <th mat-header-cell *matHeaderCellDef>Project title</th>
+      <td class="link" mat-cell *matCellDef="let element">
+        {{ element.title }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="github-link">
+      <th mat-header-cell *matHeaderCellDef>Github link</th>
+      <td class="link" mat-cell *matCellDef="let element">
+        {{ element.link }}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayColumns"
+      (click)="openDetails(row)"
+    ></tr>
+  </mat-table>
+
+  <mat-paginator #paginator [pageSizeOptions]="pageLimitOptions">
+  </mat-paginator>
+</div>

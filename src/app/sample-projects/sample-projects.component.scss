@@ -1,0 +1,18 @@
+.project-list {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  margin-top: 20px;
+  margin-left: 12px;
+  padding: 30px;
+  width: 70vw;
+}
+
+.mat-table {
+  overflow: auto;
+}
+
+.link {
+  cursor: pointer;
+  color: cadetblue;
+}
