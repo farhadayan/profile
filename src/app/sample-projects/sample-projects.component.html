@@ -1,7 +1,7 @@
-<div class="project-list mat-elevation-z8">
-  <mat-table #table [dataSource]="myProjectsData">
-    <ng-container matColumnDef="project-title">
-      <th mat-header-cell *matHeaderCellDef>Project title</th>
+<div class="project-list">
+  <mat-table #table [dataSource]="myProjectsData" matSort multiTemplateDataRows>
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Project title</th>
       <td class="link" mat-cell *matCellDef="let element">
         {{ element.title }}
       </td>

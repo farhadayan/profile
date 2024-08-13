@@ -5,16 +5,33 @@
 
 .container {
   display: flex;
+  position: relative;
   width: 100vw;
   height: calc(100vh - 100px);
 }
 
+// .container .mat-drawer {
+//   min-width: 200px;
+// }
+// .container .mat-drawer .mat-button {
+//   display: flex;
+//   width: 100%;
+//   text-align: left;
+// }
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar-multiple-rows {
+  min-height: auto;
+  height: 50px;
+  background: "#e5eff7";
+  .header-color {
+    color: #1c4966;
+  }
+}
+
 .sidenav {
-  margin-top: 3px;
-  width: 240px;
-  transition: width 300ms linear;
-  z-index: 1000;
-  position: relative;
   background: #ddd;
 }
 
@@ -22,13 +39,12 @@
   font: font(body-2);
   height: 50px;
   padding: 0 36px;
-
   display: flex;
   align-items: center;
   gap: 24px;
   cursor: pointer;
   background-color: transparent;
-  transition: background-color 300ms linear, padding 300ms linear;
+  // transition: background-color 300ms linear, padding 300ms linear;
   white-space: nowrap;
 
   &.active {
@@ -41,8 +57,8 @@
   }
 }
 
-.layout-content {
-  flex: 1 0;
+.sidenav-content {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;
